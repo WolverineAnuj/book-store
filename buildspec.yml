@@ -23,7 +23,7 @@ phases:
  
       # Upload the zip file to S3
       - echo "Uploading book-store.zip to S3..."
-      - aws s3 cp anuj.zip s3://bookstore-lambda-code/book-store.zip  # Replace with your S3 bucket name
+      - aws s3 cp book-store.zip s3://bookstore-lambda-code/book-store.zip  # Replace with your S3 bucket name
  
   post_build:
     commands:
