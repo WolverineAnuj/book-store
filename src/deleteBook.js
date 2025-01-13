@@ -22,7 +22,7 @@ exports.handler = async (event) => {
  
     const params = {
       TableName: tableName,
-      Key: { id },
+      Key: { bookId:id },
     };
  
     await dynamoDB.delete(params).promise();
