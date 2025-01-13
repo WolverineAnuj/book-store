@@ -33,6 +33,15 @@ phases:
       # Lambda Function 1
       - aws lambda update-function-code --function-name getBooks --s3-bucket bookstore-lambda-code --s3-key book-store.zip
       - echo "Lambda function 1 deployed successfully!"
+      # Lambda Function 2
+      - aws lambda update-function-code --function-name createBook --s3-bucket bookstore-lambda-code --s3-key book-store.zip
+      - echo "Lambda function 2 deployed successfully!"
+      # Lambda Function 3
+      - aws lambda update-function-code --function-name updateBook --s3-bucket bookstore-lambda-code --s3-key book-store.zip
+      - echo "Lambda function 3 deployed successfully!"
+      # Lambda Function 4
+      - aws lambda update-function-code --function-name deleteBook --s3-bucket bookstore-lambda-code --s3-key book-store.zip
+      - echo "Lambda function 4 deployed successfully!"
  
 artifacts:
   files:
