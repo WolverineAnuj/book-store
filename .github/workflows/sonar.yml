@@ -17,12 +17,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22'
+          
+      - name: Install Dependencies
+        run: npm install   
  
       - name: Run SonarQube Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          sonar-scanner \
+          npx sonar-scanner \
             -Dsonar.projectKey=wolverineanuj \
             -Dsonar.organization=wolverineanuj \
             -Dsonar.sources=. \
