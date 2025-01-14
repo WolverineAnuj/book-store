@@ -19,11 +19,11 @@ phases:
       - echo "Running tests"
       - npm run test
       - echo "Running SonarCloud analysis"
-      - npx sonar-scanner \
-          -Dsonar.projectKey=wolverineanuj \
-          -Dsonar.organization=wolverineanuj \
-          -Dsonar.sources=. \
-          -Dsonar.host.url=https://sonarcloud.io \
+      - npx sonar-scanner
+          -Dsonar.projectKey=wolverineanuj
+          -Dsonar.organization=wolverineanuj
+          -Dsonar.sources=.
+          -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.login=$SONAR_TOKEN  
  
   build:
