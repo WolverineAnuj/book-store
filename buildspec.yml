@@ -10,6 +10,7 @@ phases:
       - npm install
  
   pre_build:
+  
     commands:
       # Run tests (optional, if you have any)
       - echo "Running tests..."
